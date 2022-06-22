@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/bomb
+DEVICE_PATH := device/xiaomi/cezanne
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -31,10 +31,10 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := bomb,atom
+TARGET_OTA_ASSERT_DEVICE := cezanne
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := bomb
+TARGET_BOOTLOADER_BOARD_NAME := cezanne
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
@@ -50,7 +50,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Kernel
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive androidboot.usbconfigfs=true
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
@@ -70,11 +70,11 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/bomb
-TARGET_KERNEL_CONFIG := bomb_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6885
+TARGET_KERNEL_CONFIG := vendor/cezanne_defconfig
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6873
+TARGET_BOARD_PLATFORM := mt6885
 TARGET_BOARD_PLATFORM_GPU := mali-g57mc5
 
 # Dynamic Partitions
@@ -104,9 +104,13 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 
 # Hack: prevent anti rollback
-PLATFORM_SECURITY_PATCH := 2099-12-31
-VENDOR_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 11
+PLATFORM_SECURITY_PATCH := 2127-12-31
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+PLATFORM_VERSION := 12
+PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
+
+# Set boot SPL
+BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
