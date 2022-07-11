@@ -12,7 +12,7 @@
     echo -e "\x1b[96mcezanne: 开始添加OrangeFox Vars...\x1b[m"
     ## 构建信息
     # 设置显示在关于页面里的维护人员名称
-    export OF_MAINTAINER=ymdzq,ZhcnPanda,AngelaCool
+    export OF_MAINTAINER=AneglaCool,ymdzq,ZhcnPanda
     # 设置版本号为日期
     export FOX_VERSION=$(date +%y.%m.%d)
 
@@ -76,8 +76,8 @@
     # 使刷机包兼容红米10X 5G和红米10X Pro
     # 使红米10X 5G和红米10X Pro都能刷入橙狐zip卡刷包
     export TARGET_DEVICE_ALT="cezanne"
-    # 使橙狐可以刷入具有机型检测限制为红米K30Ultra的zip卡刷包，与TARGET_OTA_ASSERT_DEVICE冲突
-    # export OF_TARGET_DEVICES="cezanne"
+    # 使橙狐可以刷入具有机型检测限制为红米10X 5G或者红米10X Pro的zip卡刷包，与TARGET_OTA_ASSERT_DEVICE冲突
+    # export OF_TARGET_DEVICES="atom,cezanne"
 
     # 设定recovery、system、vendor、boot分区路径
     export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/by-name/recovery"
@@ -88,9 +88,9 @@
     # 避免在已加密设备上应用强制加密补丁
     export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
     # 跳过FBE解密流程（防止卡在橙狐LOGO或Redmi/Mi LOGO界面）
-    # export OF_SKIP_FBE_DECRYPTION=1
+    export OF_SKIP_FBE_DECRYPTION=1
     # 当ROM大于等于指定安卓SDK等级时，跳过FBE解密流程
-    export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31
+    # export OF_SKIP_FBE_DECRYPTION_SDKVERSION=31
     # 在MIUI OTA还原期间尝试解密内部存储（而不是错误退出）
     export OF_OTA_RES_DECRYPT=1
     # 防止橙狐在解密后重新运行自启动进程
