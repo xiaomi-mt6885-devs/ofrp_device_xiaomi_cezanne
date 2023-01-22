@@ -209,7 +209,7 @@
 		<string name="rename_backup_complete">备份重命名完成</string>
 		<string name="swipe_to_rename">滑动以重命名</string>
 		<string name="mount_hdr">挂载</string>
-		<string name="mount_sys_ro_chk">挂载系统和厂商分区为只读</string>
+		<string name="mount_sys_ro_chk">挂载 system 和 vendor 分区为只读</string>
 		<string name="decrypt_data_btn">解密数据分区</string>
 		<string name="disable_mtp_btn">禁用 MTP</string>
 		<string name="enable_mtp_btn">启用 MTP</string>
@@ -228,15 +228,15 @@
 		<string name="rb_edl_btn">Edl模式</string>
 		<string name="turning_off">正在关闭......</string>
 		<string name="swipe_power_off">滑动以关机</string>
-		<string name="sys_ro">系统分区</string>
-		<string name="sys_ro_hdr">未修改的系统分区</string>
-		<string name="sys_rop1">OrangeFox 能够不修改系统分区</string>
+		<string name="sys_ro"> system 分区</string>
+		<string name="sys_ro_hdr">未修改的 system 分区</string>
+		<string name="sys_rop1">OrangeFox 能够不修改 system 分区</string>
 		<string name="sys_rop2">，使您更容易</string>
 		<string name="sys_rop2a">进行官方更新。</string>
 		<string name="sys_rop3">OrangeFox 将无法阻止</string>
 		<string name="sys_rop4">原厂 ROM 删除 OrangeFox .</string>
 		<string name="sys_rop5">安装 ZIP或 ADB 操作</string>
-		<string name="sys_rop6">可能仍会修改系统分区。</string>
+		<string name="sys_rop6">可能仍会修改 system 分区。</string>
 		<string name="sys_ro_never_show_chk">不再显示</string>
 		<string name="sys_ro_keep_ro_btn">保持只读</string>
 		<string name="swipe_allow_mod">滑动以允许进行修改</string>
@@ -716,7 +716,7 @@
 		<string name="fm_path2">路径</string>
 		
 		<string name="no_os_title">是否确定？</string>
-		<string name="no_os_subtitle">系统分区为空</string>
+		<string name="no_os_subtitle"> system 分区为空</string>
 		
 		<string name="no_os1">未安装系统！ 您确定</string>
 		<string name="no_osrb">要重启吗？</string>
@@ -819,13 +819,13 @@
 		<string name="enabled">已启用</string>
 		<string name="zip_compatible_err">Zip Treble 兼容性错误!</string>
 
-		<string name="unmount_sys_install">安装Zip前卸载系统分区</string>
-		<string name="unmount_system">正在卸载系统分区...</string>
-		<string name="unmount_system_err">卸载系统分区失败</string>
+		<string name="unmount_sys_install">安装Zip前卸载 system 分区</string>
+		<string name="unmount_system">正在卸载 system 分区...</string>
+		<string name="unmount_system_err">卸载 system 分区失败</string>
 
-		<string name="unmount_vendor_install">安装Zip前卸载厂商分区</string>
-		<string name="unmount_vendor">正在卸载厂商分区...</string>
-		<string name="unmount_vendor_err">卸载厂商分区失败</string>
+		<string name="unmount_vendor_install">安装Zip前卸载 vendor 分区</string>
+		<string name="unmount_vendor">正在卸载 vendor 分区...</string>
+		<string name="unmount_vendor_err">卸载 vendor 分区失败</string>
 			
 		<string name="fbe_wipe_msg">警告： {1} 已被清除。为了设置初始FBE策略，FBE设备在清除之后需要重启进入安卓系统，不是重启进恢复模式</string>
 		<string name="fastboot_button">Fastboot</string>

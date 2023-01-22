@@ -53,8 +53,8 @@ export OF_FLASHLIGHT_ENABLE=0
 # 由于橙狐默认屏幕比例是16：9,所以应设置屏幕高度为屏幕比例换算成n：9之后，n*120
 export OF_SCREEN_H=2400
 export OF_STATUS_H=90
-export OF_STATUS_INDENT_LEFT=90
-export OF_STATUS_INDENT_RIGHT=90
+export OF_STATUS_INDENT_LEFT=80
+export OF_STATUS_INDENT_RIGHT=80
 # 添加黑色状态栏（隐藏刘海）选项
 # export OF_HIDE_NOTCH=1
 # 由于有刘海遮挡，设置时钟位置为只能显示在左侧或右侧
