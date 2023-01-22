@@ -29,6 +29,7 @@
 
 # Firmware partitions
 /metadata           ext4     /dev/block/by-name/md_udc                       flags=display="Metadata";backup=1
+/md1img             emmc     /dev/block/by-name/md1img                       flags=display="Md1img";backup=1
 /protect_f          ext4     /dev/block/by-name/protect1                     flags=display="Protect_f";backup=1
 /protect_s          ext4     /dev/block/by-name/protect2                     flags=display="Protect_s";backup=1
 /nvdata             ext4     /dev/block/by-name/nvdata                       flags=display="Nvdata";backup=1
